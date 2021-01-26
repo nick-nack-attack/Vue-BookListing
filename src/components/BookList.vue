@@ -1,13 +1,11 @@
 <template>
   <div>
     <h1>
-      {{ title }}
+      {{title}}
     </h1>
-    <ol>
-      v-for (book in books) {
-      <li>{{ book.title }}: {{ book.author }}</li>
-      }
-    </ol>
+    <ul>
+      <li v-for="book in books">{{book.title}}: {{book.author}}</li>
+    </ul>
   </div>
 </template>
 
@@ -31,7 +29,7 @@
   h1, h2 {
     font-weight: normal;
   }
-  ol {
+  ul {
     list-style-type: none;
     padding: 0;
   }
