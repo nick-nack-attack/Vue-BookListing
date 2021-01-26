@@ -7,23 +7,22 @@
 </template>
 
 <script>
-  export default {
-    name: "BookForm",
-    props: ['books'],
-    data() {
-      return {
-        bookTitle: '',
-        bookAuthor: '',
-      }
+export default {
+  name: 'BookForm',
+  props: ['books'],
+  data() {
+    return {
+      bookTitle: '',
+      bookAuthor: '',
+    };
+  },
+  methods: {
+    bookSubmit(bookTitle, bookAuthor) {
+      this.$emit('addBook', bookTitle, bookAuthor);
     },
-    methods: {
-      bookSubmit(bookTitle, bookAuthor) {
-        this.$emit('addBook', bookTitle, bookAuthor)
-      }
-    },
-  }
+  },
+};
 </script>
 
-<style scoped>
-
+<style>
 </style>
