@@ -13,7 +13,7 @@
   import BookItem from "./BookItem";
 
   export default {
-    name: 'BookList',
+    name: "BookList",
     components: {BookItem},
     data() {
       return {
